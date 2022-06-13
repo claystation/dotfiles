@@ -10,9 +10,7 @@ sudo pacman -Syu neovim \
 	feh
 
 # AURs
-pamac build slack-desktop \
-	spotify \
-    	polybar
+pamac build --no-confirm slack-desktop spotify polybar
 
 # VIM Plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
