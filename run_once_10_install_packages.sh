@@ -6,7 +6,8 @@ sudo pacman -Syu neovim \
 	firefox \
 	unzip \
 	rofi \
-    	go
+    	go \
+	feh
 
 # AURs
 pamac build slack-desktop \
