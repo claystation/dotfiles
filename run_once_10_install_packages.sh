@@ -6,7 +6,6 @@ sudo pacman -Syu neovim \
 	firefox \
 	unzip \
 	rofi \
-    	go \
 	feh
 
 # AURs
