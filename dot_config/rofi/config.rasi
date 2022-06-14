@@ -1,0 +1,13 @@
+configuration {
+    modi: "run,ssh,drun";
+    font: "MesloLGM Nerd Font 14";
+    dpi: 96;
+    show-icons: true;
+    sidebar-mode: false;
+    drun-display-format: "{name}";
+    display-drun: " ";
+    icon-theme: "Papirus-Dark";
+}
+
+@theme "theme"
+
