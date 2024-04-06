@@ -5,9 +5,11 @@ sudo pacman -Syu neovim \
 	firefox \
 	unzip \
 	rofi \
-	polybar
+	polybar \
+	code \
+	docker
 
-e# Change Shell
+# Change Shell
 if [ $SHELL != $(which zsh) ]; then
     chsh -s $(which zsh)
 fi
