@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="fwalch"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -30,9 +30,11 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git asdf sudo)
+plugins=(git asdf sudo kubectl kubectx helm)
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
+source <(flux completion zsh)
 
 # User configuration
 
@@ -42,3 +44,6 @@ alias vim="nvim"
 alias zshcnf="$EDITOR ~/.zshrc"
 alias zshsrc="source ~/.zshrc"
 alias ll="ls -slah"
+alias k="kubectl"
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"

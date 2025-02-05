@@ -1,13 +1,19 @@
 #!/bin/bash
 
 # Packages
-sudo pacman -Syu neovim \
+sudo pacman -Syu --needed \
+	neovim \
 	firefox \
 	unzip \
 	rofi \
 	polybar \
 	code \
-	docker
+	docker \
+	kubectl \
+	helm \
+	kubectx \
+	fluxcd \
+	kitty
 
 # Change Shell
 if [ $SHELL != $(which zsh) ]; then
@@ -27,9 +33,9 @@ if ! [ -d ~/.local/share/fonts/Hack ]; then
     wget -O ~/Downloads/Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
     unzip ~/Downloads/Hack.zip -d ~/.local/share/fonts/Hack
     rm ~/Downloads/Hack.zip
+    fc-cache -fv
 fi
 
-fc-cache -fv
 
 # asdf VM
 if ! [ -d ~/.local ]; then
